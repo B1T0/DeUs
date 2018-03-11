@@ -21,7 +21,7 @@ def conv_layer(filter_shape, tf_name_scope, layer_input):
     variable_summaries(W, tf_name_scope+"/weights")
     b = tf.Variable(tf.constant(0.1, shape=[256]), name="b")
     variable_summaries(b, tf_name_scope+"/biases")
-    conv = tf.nn.conv2d(layer_input, W, strides=[1, 1, 1, 1], padding="VALID", name=tf_name_sope+"conv")
+    conv = tf.nn.conv2d(layer_input, W, strides=[1, 1, 1, 1], padding="VALID", name=tf_name_scope+"conv")
     h = tf.nn.relu(tf.nn.bias_add(conv, b), name="relu")
     return W, b, h
     

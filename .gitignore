@@ -106,3 +106,6 @@ mykey.key
 
 # mac files
 *.DS_Store
+
+# specific files
+/resources/NeuronRank/
